@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { useMouseTracker3D, get3DTransform } from "../components/MouseTracker3D";
 import { ConnectingLinesBackground } from "../components/ConnectingLinesBackground";
 import { useState } from "react";
+import { Link } from "react-router";
 import deepTechAIImage from "../../imports/ChatGPT_Image_Apr_28,_2026,_09_46_38_PM.png";
 import simulationImage from "../../imports/ChatGPT_Image_Apr_28,_2026,_09_51_40_PM.png";
 import saasStudioImage from "../../imports/ChatGPT_Image_Apr_28,_2026,_09_54_18_PM.png";
@@ -335,19 +336,19 @@ export function Divisions() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/products"
+            <Link
+              to="/products"
               className="px-8 py-4 bg-white text-black hover:bg-white/90 transition-colors inline-flex items-center justify-center gap-2"
             >
               Explore Products
               <ArrowRight size={20} />
-            </a>
-            <a
-              href="/partnerships"
+            </Link>
+            <Link
+              to="/partnerships"
               className="px-8 py-4 border border-white/20 hover:bg-white/5 transition-colors"
             >
               Partner With Us
-            </a>
+            </Link>
           </div>
         </div>
       </section>

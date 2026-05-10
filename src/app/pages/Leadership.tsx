@@ -5,6 +5,7 @@ import { GlassCard } from "../components/GlassCard";
 import { ConnectingLinesBackground } from "../components/ConnectingLinesBackground";
 import { Link } from "react-router";
 import founderImage from "../../imports/WhatsApp_Image_2026-04-22_at_14.07.19.jpeg";
+import cooImage from "../../imports/86381B7E-231B-4619-BBB3-018626F01555_1_105_c.jpeg";
 
 export function Leadership() {
   const principles = [
@@ -34,33 +35,58 @@ export function Leadership() {
     <div className="min-h-screen">
       <ConnectingLinesBackground />
       <section className="relative z-10 min-h-screen flex items-center justify-center px-4 py-32">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-block px-6 py-2 glass rounded-full mb-8 text-sm text-white/70">
+            Leadership
+          </div>
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl mb-8 tracking-tight leading-tight">
+            Building<br />
+            <span className="text-gradient-blue">Category-Defining</span><br />
+            Infrastructure
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl text-white/60 leading-relaxed">
+            Led by technologists who understand that the future isn't built with incremental improvements—it's built with foundational infrastructure that changes everything.
+          </p>
+        </div>
+      </section>
+
+      <section className="relative z-10 py-24 px-4 border-t border-white/10">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <div className="inline-block px-6 py-2 glass rounded-full mb-8 text-sm text-white/70">
-                Leadership
-              </div>
-              <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl mb-8 tracking-tight leading-tight">
-                Building<br />
-                <span className="text-gradient-blue">Category-Defining</span><br />
-                Infrastructure
-              </h1>
-              <p className="text-base sm:text-lg md:text-xl text-white/60 leading-relaxed">
-                Led by technologists who understand that the future isn't built with incremental improvements—it's built with foundational infrastructure that changes everything.
-              </p>
-            </div>
-            <GlassCard className="p-12" glow="blue">
-              <div className="w-48 h-48 rounded-3xl glass-strong mx-auto mb-8 flex items-center justify-center overflow-hidden">
+          <h2 className="text-3xl md:text-4xl mb-16 text-center">Our Leadership</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <GlassCard className="p-8" glow="blue">
+              <div className="w-32 h-32 rounded-3xl glass-strong mx-auto mb-6 flex items-center justify-center overflow-hidden">
                 <img src={founderImage} alt="Sindhu Varikuppala" className="w-full h-full object-cover" />
               </div>
-              <h2 className="text-3xl mb-2 text-center">Sindhu Varikuppala</h2>
-              <h3 className="text-xl mb-2 text-center text-white/80">Founder & CEO</h3>
-              <p className="text-white/60 text-center mb-8">Visionary Technologist</p>
-              <div className="space-y-4 text-sm text-white/70">
-                <p>• Deep AI/ML expertise</p>
-                <p>• Infrastructure architect</p>
-                <p>• Category creator</p>
+              <h2 className="text-2xl font-bold mb-2 text-center">Sindhu Varikuppala</h2>
+              <p className="text-cyan-400 text-sm mb-4 font-semibold text-center">Founder & CEO</p>
+              <p className="text-white/70 text-sm leading-relaxed mb-4">
+                Sindhu Varikuppala is the Founder & CEO of Svara Techfusion, leading the company's vision, strategic direction, and business growth initiatives. With a background in Business Development and HR Management, she brings experience across operations, workforce management, client acquisition, and organizational structuring.
+              </p>
+              <p className="text-white/70 text-sm leading-relaxed mb-4">
+                She holds a B.Sc in Agriculture along with an MBA in Agribusiness Management from Vivekananda Global University, Jaipur. Her professional journey spans technology, smart home solutions, and early-stage business operations, where she has worked on building scalable systems, managing cross-functional teams, and driving execution-focused growth.
+              </p>
+              <p className="text-white/70 text-sm leading-relaxed">
+                At Svara Techfusion, Sindhu focuses on building an AI-first technology ecosystem designed to help organizations move from fragmented systems to intelligent, connected digital infrastructure.
+              </p>
+            </GlassCard>
+
+            <GlassCard className="p-8" glow="purple">
+              <div className="w-32 h-32 rounded-3xl glass-strong mx-auto mb-6 flex items-center justify-center overflow-hidden">
+                <img src={cooImage} alt="Prabhath Sandesh" className="w-full h-full object-cover" />
               </div>
+              <h2 className="text-2xl font-bold mb-2 text-center">Prabhath Sandesh</h2>
+              <p className="text-purple-400 text-sm mb-4 font-semibold text-center">Co-Founder & Chief Operating Officer</p>
+              <p className="text-white/70 text-sm leading-relaxed mb-4">
+                Prabhath Sandesh is the Co-Founder & Chief Operating Officer of Svara Techfusion, responsible for operations, execution strategy, ecosystem structuring, and business scalability. With a background in Mechatronics, Robotics, and Automation Engineering, he combines technical understanding with operational leadership to build scalable and execution-driven systems.
+              </p>
+              <p className="text-white/70 text-sm leading-relaxed mb-4">
+                At Svara Techfusion, Prabhath plays a key role in translating long-term vision into structured execution—focusing on AI ecosystems, SaaS platforms, intelligent automation, deep tech integration, and scalable digital infrastructure.
+              </p>
+              <p className="text-white/70 text-sm leading-relaxed">
+                His work centers around building connected systems that move businesses from fragmented operations to intelligent, AI-driven ecosystems designed for long-term growth and innovation.
+              </p>
             </GlassCard>
           </div>
         </div>

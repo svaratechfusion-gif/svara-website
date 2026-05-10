@@ -2,6 +2,7 @@ import { Building2, Factory, TruckIcon, ShoppingCart, GraduationCap, HeartPulse,
 import { motion, useScroll, useTransform } from "motion/react";
 import { useMouseTracker3D, get3DTransform } from "../components/MouseTracker3D";
 import { ConnectingLinesBackground } from "../components/ConnectingLinesBackground";
+import { Link } from "react-router";
 
 export function Industries() {
   const industries = [
@@ -162,19 +163,19 @@ export function Industries() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="px-8 py-4 bg-white text-black hover:bg-white/90 transition-colors inline-flex items-center justify-center gap-2"
             >
               Schedule Consultation
               <ArrowRight size={20} />
-            </a>
-            <a
-              href="/products"
+            </Link>
+            <Link
+              to="/products"
               className="px-8 py-4 border border-white/20 hover:bg-white/5 transition-colors"
             >
               Explore Solutions
-            </a>
+            </Link>
           </div>
         </div>
       </section>

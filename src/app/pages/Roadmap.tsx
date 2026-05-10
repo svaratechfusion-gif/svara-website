@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "motion/react";
 import { useMouseTracker3D, get3DTransform } from "../components/MouseTracker3D";
 import { ConnectingLinesBackground } from "../components/ConnectingLinesBackground";
 import { CheckCircle, Circle, ArrowRight, Rocket, Target, TrendingUp, Users, Zap, Globe } from "lucide-react";
+import { Link } from "react-router";
 
 export function Roadmap() {
   const phases = [
@@ -414,19 +415,19 @@ export function Roadmap() {
           </p>
 
           <div className="flex flex-col justify-center gap-4 sm:flex-row">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-4 font-semibold text-white shadow-lg shadow-cyan-500/50 transition-all hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/70"
             >
               Get Started
               <ArrowRight size={20} />
-            </a>
-            <a
-              href="/company"
+            </Link>
+            <Link
+              to="/company"
               className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-cyan-500 px-8 py-4 font-semibold text-cyan-400 transition-all hover:scale-105 hover:bg-cyan-500/10"
             >
               About SVARA
-            </a>
+            </Link>
           </div>
         </div>
       </section>

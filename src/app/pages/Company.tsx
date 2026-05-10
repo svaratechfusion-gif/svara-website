@@ -3,6 +3,8 @@ import { useMouseTracker3D, get3DTransform } from "../components/MouseTracker3D"
 import { ConnectingLinesBackground } from "../components/ConnectingLinesBackground";
 import { Target, Users, Award, MapPin, ArrowRight, Calendar, Building2, Globe, Zap } from "lucide-react";
 import { Link } from "react-router";
+import founderImage from "../../imports/WhatsApp_Image_2026-04-22_at_14.07.19.jpeg";
+import cooImage from "../../imports/86381B7E-231B-4619-BBB3-018626F01555_1_105_c.jpeg";
 
 export function Company() {
   const values = [
@@ -231,28 +233,38 @@ export function Company() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl mb-16 text-center">Leadership</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="p-8 bg-white/5 border border-white/10">
-              <div className="w-24 h-24 bg-gradient-to-br from-blue-500/20 to-purple-500/20 border border-white/10 mb-6" />
-              <h3 className="text-xl mb-2">Founder & CEO</h3>
-              <p className="text-white/60 text-sm mb-4">
-                Visionary technologist with deep AI/ML expertise and enterprise building experience
+              <div className="w-24 h-24 rounded-3xl overflow-hidden mb-6">
+                <img src={founderImage} alt="Sindhu Varikuppala" className="w-full h-full object-cover" />
+              </div>
+              <h3 className="text-2xl font-bold mb-2">Sindhu Varikuppala</h3>
+              <p className="text-cyan-400 text-sm mb-4 font-semibold">Founder & CEO</p>
+              <p className="text-white/70 text-sm leading-relaxed">
+                Sindhu Varikuppala is the Founder & CEO of Svara Techfusion, leading the company's vision, strategic direction, and business growth initiatives. With a background in Business Development and HR Management, she brings experience across operations, workforce management, client acquisition, and organizational structuring.
+              </p>
+              <p className="text-white/70 text-sm leading-relaxed mt-4">
+                She holds a B.Sc in Agriculture along with an MBA in Agribusiness Management from Vivekananda Global University, Jaipur. Her professional journey spans technology, smart home solutions, and early-stage business operations, where she has worked on building scalable systems, managing cross-functional teams, and driving execution-focused growth.
+              </p>
+              <p className="text-white/70 text-sm leading-relaxed mt-4">
+                At Svara Techfusion, Sindhu focuses on building an AI-first technology ecosystem designed to help organizations move from fragmented systems to intelligent, connected digital infrastructure.
               </p>
             </div>
 
             <div className="p-8 bg-white/5 border border-white/10">
-              <div className="w-24 h-24 bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-white/10 mb-6" />
-              <h3 className="text-xl mb-2">CTO</h3>
-              <p className="text-white/60 text-sm mb-4">
-                Infrastructure architect scaling AI systems from research to production
+              <div className="w-24 h-24 rounded-3xl overflow-hidden mb-6">
+                <img src={cooImage} alt="Prabhath Sandesh" className="w-full h-full object-cover" />
+              </div>
+              <h3 className="text-2xl font-bold mb-2">Prabhath Sandesh</h3>
+              <p className="text-purple-400 text-sm mb-4 font-semibold">Co-Founder & Chief Operating Officer</p>
+              <p className="text-white/70 text-sm leading-relaxed">
+                Prabhath Sandesh is the Co-Founder & Chief Operating Officer of Svara Techfusion, responsible for operations, execution strategy, ecosystem structuring, and business scalability. With a background in Mechatronics, Robotics, and Automation Engineering, he combines technical understanding with operational leadership to build scalable and execution-driven systems.
               </p>
-            </div>
-
-            <div className="p-8 bg-white/5 border border-white/10">
-              <div className="w-24 h-24 bg-gradient-to-br from-pink-500/20 to-cyan-500/20 border border-white/10 mb-6" />
-              <h3 className="text-xl mb-2">Chief of AI</h3>
-              <p className="text-white/60 text-sm mb-4">
-                Research leader driving model development and platform intelligence
+              <p className="text-white/70 text-sm leading-relaxed mt-4">
+                At Svara Techfusion, Prabhath plays a key role in translating long-term vision into structured execution—focusing on AI ecosystems, SaaS platforms, intelligent automation, deep tech integration, and scalable digital infrastructure.
+              </p>
+              <p className="text-white/70 text-sm leading-relaxed mt-4">
+                His work centers around building connected systems that move businesses from fragmented operations to intelligent, AI-driven ecosystems designed for long-term growth and innovation.
               </p>
             </div>
           </div>

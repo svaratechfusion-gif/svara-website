@@ -5,6 +5,7 @@ import { ConnectingLinesBackground } from "../components/ConnectingLinesBackgrou
 import { SEOHead } from "../components/SEOHead";
 import { productSchemas } from "../components/StructuredData";
 import { useState } from "react";
+import { Link } from "react-router";
 import visionAIImage from "../../imports/ChatGPT_Image_Apr_29,_2026,_04_46_36_AM.png";
 import droneAIImage from "../../imports/ChatGPT_Image_Apr_29,_2026,_04_58_18_AM-1.png";
 import edgeAIImage from "../../imports/ChatGPT_Image_Apr_29,_2026,_05_01_20_AM.png";
@@ -390,19 +391,19 @@ export function Products() {
               Not standalone products. <span className="text-white">An integrated ecosystem.</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/technology"
+              <Link
+                to="/technology"
                 className="px-8 py-4 bg-white text-black hover:bg-white/90 transition-colors inline-flex items-center justify-center gap-2"
               >
                 View Technology Stack
                 <ArrowRight size={20} />
-              </a>
-              <a
-                href="/contact"
+              </Link>
+              <Link
+                to="/contact"
                 className="px-8 py-4 border border-white/20 hover:bg-white/5 transition-colors"
               >
                 Request Demo
-              </a>
+              </Link>
             </div>
           </div>
         </div>

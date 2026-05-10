@@ -194,56 +194,13 @@ export function Home() {
             </p>
           </motion.div>
 
-          {/* 3D Orbiting Ecosystem */}
-          <div className="flex items-center justify-center">
-            <div className="relative w-full max-w-[700px] aspect-square sm:max-w-[800px] md:max-w-[900px] lg:max-w-[1000px] xl:max-w-[1100px]">
-              {/* Orbital Rings */}
-              <svg className="absolute inset-0" viewBox="0 0 1000 1000">
-                <defs>
-                  <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#06b6d4" stopOpacity="0.3" />
-                    <stop offset="50%" stopColor="#3b82f6" stopOpacity="0.2" />
-                    <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0.3" />
-                  </linearGradient>
-                </defs>
-                <motion.circle
-                  cx="500"
-                  cy="500"
-                  r="300"
-                  fill="none"
-                  stroke="url(#ringGradient)"
-                  strokeWidth="2"
-                  strokeDasharray="10 5"
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1, rotate: 360 }}
-                  transition={{
-                    pathLength: { duration: 2, ease: "easeOut" },
-                    rotate: { duration: 60, repeat: Infinity, ease: "linear" }
-                  }}
-                  style={{ transformOrigin: "500px 500px" }}
-                />
-                <motion.circle
-                  cx="500"
-                  cy="500"
-                  r="220"
-                  fill="none"
-                  stroke="url(#ringGradient)"
-                  strokeWidth="1"
-                  strokeDasharray="5 3"
-                  opacity="0.5"
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1, rotate: -360 }}
-                  transition={{
-                    pathLength: { duration: 2, ease: "easeOut", delay: 0.2 },
-                    rotate: { duration: 80, repeat: Infinity, ease: "linear" }
-                  }}
-                  style={{ transformOrigin: "500px 500px" }}
-                />
-              </svg>
+          {/* 3D Pinwheel Ecosystem */}
+          <div className="flex items-center justify-center px-4 py-16">
+            <div className="relative w-full max-w-[700px] sm:max-w-[800px] md:max-w-[900px] lg:max-w-[1000px] aspect-square mx-auto">
 
-              {/* Center Core */}
+              {/* Center Core - Circular */}
               <motion.div
-                className="absolute left-1/2 top-1/2 size-40 sm:size-44 md:size-48 lg:size-52 -translate-x-1/2 -translate-y-1/2"
+                className="absolute left-1/2 top-1/2 size-24 sm:size-32 md:size-40 lg:size-48 -translate-x-1/2 -translate-y-1/2 z-20"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{
                   scale: 1,
@@ -257,59 +214,13 @@ export function Home() {
                   damping: 20
                 }}
               >
-                <div className="relative size-full">
-                  {/* Hexagonal Background */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <svg className="w-full h-full" viewBox="0 0 192 192">
-                      <defs>
-                        <linearGradient id="coreGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" stopColor="#06b6d4" stopOpacity="0.4" />
-                          <stop offset="50%" stopColor="#3b82f6" stopOpacity="0.6" />
-                          <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0.4" />
-                        </linearGradient>
-                      </defs>
-                      <motion.polygon
-                        points="96,20 166,60 166,132 96,172 26,132 26,60"
-                        fill="url(#coreGradient)"
-                        stroke="#06b6d4"
-                        strokeWidth="3"
-                        initial={{ scale: 0, rotate: 0 }}
-                        animate={{
-                          scale: 1,
-                          rotate: [0, 360],
-                        }}
-                        transition={{
-                          scale: { duration: 0.8, delay: 0.5 },
-                          rotate: { duration: 30, repeat: Infinity, ease: "linear" }
-                        }}
-                        style={{ transformOrigin: "96px 96px" }}
-                      />
-                      <motion.polygon
-                        points="96,35 151,67.5 151,124.5 96,157 41,124.5 41,67.5"
-                        fill="none"
-                        stroke="#3b82f6"
-                        strokeWidth="1.5"
-                        opacity="0.6"
-                        initial={{ scale: 0 }}
-                        animate={{
-                          scale: 1,
-                          rotate: [-360, 0],
-                        }}
-                        transition={{
-                          scale: { duration: 0.8, delay: 0.6 },
-                          rotate: { duration: 40, repeat: Infinity, ease: "linear" }
-                        }}
-                        style={{ transformOrigin: "96px 96px" }}
-                      />
-                    </svg>
-                  </div>
-
-                  {/* Core Content */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center">
+                <div className="relative size-full rounded-full border-4 border-white bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 shadow-[0_0_60px_rgba(6,182,212,0.6)] flex items-center justify-center">
+                  <div className="absolute inset-2 rounded-full border-2 border-white/30" />
+                  <div className="flex flex-col items-center justify-center text-center">
                     <motion.div
-                      className="mb-1 sm:mb-2 text-2xl sm:text-3xl md:text-4xl lg:text-5xl"
+                      className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-1"
                       animate={{
-                        scale: [1, 1.2, 1],
+                        scale: [1, 1.1, 1],
                       }}
                       transition={{
                         duration: 2,
@@ -319,16 +230,17 @@ export function Home() {
                     >
                       ⚡
                     </motion.div>
-                    <div className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-white">SVARA</div>
-                    <div className="text-xs sm:text-sm text-cyan-400">CORE</div>
+                    <div className="text-xs sm:text-sm md:text-base font-bold text-white">SVARA</div>
                   </div>
                 </div>
               </motion.div>
 
-              {/* Orbiting Nodes */}
+              {/* Orbiting Cards - Pinwheel Layout */}
               {nodes.map((node, index) => {
-                const x = Math.cos((node.angle * Math.PI) / 180) * 300;
-                const y = Math.sin((node.angle * Math.PI) / 180) * 300;
+                const radius = 180;
+                const angleRad = (node.angle * Math.PI) / 180;
+                const x = Math.cos(angleRad) * radius;
+                const y = Math.sin(angleRad) * radius;
                 const isHovered = hoveredNode === node.id;
 
                 return (
@@ -336,8 +248,8 @@ export function Home() {
                     key={node.id}
                     className="absolute left-1/2 top-1/2 cursor-pointer"
                     style={{
-                      x: x - 48,
-                      y: y - 48,
+                      marginLeft: `${x}px`,
+                      marginTop: `${y}px`,
                     }}
                     initial={{ scale: 0, opacity: 0 }}
                     animate={{
@@ -345,139 +257,74 @@ export function Home() {
                       opacity: 1,
                     }}
                     transition={{
-                      delay: index * 0.12 + 0.8,
+                      delay: index * 0.1 + 0.5,
                       duration: 0.6,
                       type: "spring",
-                      stiffness: 250,
-                      damping: 18,
+                      stiffness: 150,
+                      damping: 15,
                     }}
                     onHoverStart={() => setHoveredNode(node.id)}
                     onHoverEnd={() => setHoveredNode(null)}
                     onClick={() => handleNodeClick(node.path)}
                     whileHover={{
                       scale: 1.15,
-                      y: -15,
                       transition: {
                         type: "spring",
-                        stiffness: 400,
-                        damping: 15,
+                        stiffness: 300,
+                        damping: 12,
                       }
                     }}
                     whileTap={{ scale: 0.95 }}
                   >
                     {/* Connection Line */}
                     <svg
-                      className="pointer-events-none absolute left-1/2 top-1/2 w-[800px] h-[800px] sm:w-[900px] sm:h-[900px] md:size-[1000px] lg:size-[1100px] -translate-x-1/2 -translate-y-1/2"
-                      style={{ zIndex: -1 }}
+                      className="pointer-events-none absolute left-0 top-0 w-[400px] h-[400px] overflow-visible"
+                      style={{
+                        zIndex: -1,
+                        transform: `translate(${-200 - x}px, ${-200 - y}px)`
+                      }}
                     >
-                      <defs>
-                        <linearGradient id={`lineGradient${node.id}`} x1="50%" y1="50%" x2={`${50 + (x / 10)}%`} y2={`${50 + (y / 10)}%`}>
-                          <stop offset="0%" stopColor={node.color} stopOpacity="0.1" />
-                          <stop offset="100%" stopColor={node.color} stopOpacity="0.6" />
-                        </linearGradient>
-                      </defs>
                       <motion.line
-                        x1="500"
-                        y1="500"
-                        x2={500 + x}
-                        y2={500 + y}
-                        stroke={isHovered ? node.color : `url(#lineGradient${node.id})`}
-                        strokeWidth={isHovered ? "3" : "2"}
-                        opacity={isHovered ? "1" : "0.4"}
+                        x1="200"
+                        y1="200"
+                        x2={200 + x}
+                        y2={200 + y}
+                        stroke={node.color}
+                        strokeWidth={isHovered ? "2" : "1"}
+                        opacity={isHovered ? "0.6" : "0.2"}
+                        strokeDasharray="4 4"
                         initial={{ pathLength: 0 }}
                         animate={{ pathLength: 1 }}
-                        transition={{ duration: 1.2, delay: index * 0.12 + 0.8 }}
+                        transition={{ duration: 1, delay: index * 0.1 + 0.5 }}
                       />
-                      {isHovered && (
-                        <motion.circle
-                          r="4"
-                          fill={node.color}
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: [0, 1, 0] }}
-                          transition={{ duration: 1.5, repeat: Infinity }}
-                        >
-                          <animateMotion
-                            dur="2s"
-                            repeatCount="indefinite"
-                            path={`M 500 500 L ${500 + x} ${500 + y}`}
-                          />
-                        </motion.circle>
-                      )}
                     </svg>
 
-                    {/* Node - Hexagonal Shape */}
-                    <div className="relative size-24 sm:size-28 md:size-32 lg:size-36">
-                      <svg width="128" height="128" viewBox="0 0 128 128" className="absolute inset-0">
-                        <defs>
-                          <linearGradient id={`nodeGradient${node.id}`} x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stopColor={node.color} stopOpacity="0.3" />
-                            <stop offset="100%" stopColor={node.color} stopOpacity="0.1" />
-                          </linearGradient>
-                          <filter id={`glow${node.id}`}>
-                            <feGaussianBlur stdDeviation={isHovered ? "4" : "2"} result="coloredBlur"/>
-                            <feMerge>
-                              <feMergeNode in="coloredBlur"/>
-                              <feMergeNode in="SourceGraphic"/>
-                            </feMerge>
-                          </filter>
-                        </defs>
-                        <motion.polygon
-                          points="64,10 110,37 110,91 64,118 18,91 18,37"
-                          fill={`url(#nodeGradient${node.id})`}
-                          stroke={node.color}
-                          strokeWidth={isHovered ? "3" : "2"}
-                          filter={`url(#glow${node.id})`}
-                          animate={{
-                            strokeWidth: isHovered ? 3 : 2,
-                          }}
-                          transition={{ duration: 0.2 }}
-                        />
-                      </svg>
-
-                      <div className="absolute inset-0 flex flex-col items-center justify-center">
-                        <motion.div
-                          className="rounded-lg p-1 sm:p-2"
+                    {/* Card */}
+                    <div
+                      className="w-28 h-36 sm:w-32 sm:h-40 md:w-36 md:h-44 rounded-xl border-2 overflow-hidden shadow-2xl -translate-x-1/2 -translate-y-1/2"
+                      style={{
+                        borderColor: node.color,
+                        background: `linear-gradient(135deg, ${node.color}20, ${node.color}05)`,
+                        backdropFilter: "blur(10px)",
+                        boxShadow: isHovered ? `0 0 40px ${node.color}80` : `0 0 20px ${node.color}40`,
+                      }}
+                    >
+                      {/* Card Content */}
+                      <div className="size-full flex flex-col items-center justify-center p-4 text-center">
+                        <div
+                          className="size-12 sm:size-14 md:size-16 rounded-full mb-3 flex items-center justify-center"
                           style={{
-                            backgroundColor: `${node.color}20`,
+                            backgroundColor: `${node.color}30`,
+                            border: `2px solid ${node.color}`,
                           }}
-                          animate={{
-                            scale: isHovered ? 1.2 : 1,
-                          }}
-                          transition={{ duration: 0.2 }}
                         >
-                          <div className="size-4 sm:size-6 md:size-7 lg:size-8 rounded-full" style={{ backgroundColor: node.color, opacity: 0.8 }} />
-                        </motion.div>
-                        <motion.div
-                          className="mt-1 sm:mt-2 text-center text-xs sm:text-sm font-bold text-white"
-                          animate={{
-                            scale: isHovered ? 1.1 : 1,
-                          }}
-                          transition={{ duration: 0.2 }}
-                        >
+                          <div className="size-6 sm:size-7 md:size-8 rounded-full" style={{ backgroundColor: node.color }} />
+                        </div>
+                        <p className="text-sm sm:text-base font-bold text-white">
                           {node.label}
-                        </motion.div>
+                        </p>
                       </div>
                     </div>
-
-                    {/* Hover Info Card */}
-                    {isHovered && (
-                      <motion.div
-                        className="absolute -bottom-12 sm:-bottom-16 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-lg sm:rounded-xl border px-2 py-1 sm:px-4 sm:py-2 text-xs backdrop-blur-lg hidden sm:block"
-                        style={{
-                          backgroundColor: `${node.color}10`,
-                          borderColor: `${node.color}40`,
-                        }}
-                        initial={{ opacity: 0, y: -10, scale: 0.8 }}
-                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                        transition={{
-                          type: "spring",
-                          stiffness: 500,
-                          damping: 25
-                        }}
-                      >
-                        <div className="font-semibold text-white">Click to explore {node.label}</div>
-                      </motion.div>
-                    )}
                   </motion.div>
                 );
               })}

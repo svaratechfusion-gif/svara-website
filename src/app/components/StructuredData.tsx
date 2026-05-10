@@ -27,7 +27,7 @@ export const organizationSchema = {
   "sameAs": [
     "https://x.com/SvaraTechfusion",
     "https://www.instagram.com/svaratechfusion/",
-    "https://www.linkedin.com/company/svara-techfusion/"
+    "https://www.linkedin.com/company/svara-techfusion"
   ],
   "founder": {
     "@type": "Person",

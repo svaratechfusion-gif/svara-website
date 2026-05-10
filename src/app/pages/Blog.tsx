@@ -3,8 +3,23 @@ import { ConnectingLinesBackground } from "../components/ConnectingLinesBackgrou
 import { SEOHead } from "../components/SEOHead";
 import { Calendar, Clock, ArrowRight, Tag } from "lucide-react";
 import { Link } from "react-router";
+import { useState } from "react";
 
 export function Blog() {
+  const [email, setEmail] = useState("");
+  const [subscribeStatus, setSubscribeStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (email && email.includes("@")) {
+      setSubscribeStatus("success");
+      setEmail("");
+      setTimeout(() => setSubscribeStatus("idle"), 3000);
+    } else {
+      setSubscribeStatus("error");
+      setTimeout(() => setSubscribeStatus("idle"), 3000);
+    }
+  };
   const blogPosts = [
     {
       id: 1,
@@ -257,16 +272,19 @@ export function Blog() {
           <p className="text-white/60 mb-8 px-4">
             Get the latest insights on AI infrastructure, enterprise systems, and intelligent automation.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto px-4">
+          <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto px-4">
             <input
               type="email"
               placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
               className="flex-1 px-4 py-3 bg-white/5 border border-white/10 focus:border-cyan-500/50 focus:outline-none transition-colors text-white placeholder-white/40"
             />
-            <button className="px-6 py-3 bg-gradient-to-r from-[#C0C0C0] to-[#E5E7EB] hover:from-[#D1D5DB] hover:to-[#F3F4F6] transition-all text-black font-medium whitespace-nowrap">
-              Subscribe
+            <button type="submit" className="px-6 py-3 bg-gradient-to-r from-[#C0C0C0] to-[#E5E7EB] hover:from-[#D1D5DB] hover:to-[#F3F4F6] transition-all text-black font-medium whitespace-nowrap">
+              {subscribeStatus === "success" ? "Subscribed!" : subscribeStatus === "error" ? "Invalid Email" : "Subscribe"}
             </button>
-          </div>
+          </form>
         </div>
       </section>
     </div>
